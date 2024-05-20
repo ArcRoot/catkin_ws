@@ -1,0 +1,2 @@
+assignment_1:xycar_msgs
+-DCATKIN_DEVEL_PREFIX=/home/arcroot/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/arcroot/catkin_ws/install -G Unix Makefiles
