@@ -50,7 +50,8 @@ def drive(angle, speed):
 #=============================================
 def planning(sx, sy, syaw, max_acceleration, dt):
     global rx, ry
-
+    rx=[]
+    ry=[]
     #car head x, y
     hx=sx+70*math.cos(syaw*math.pi/180+math.pi/2)
     hy=sy+70*math.sin(syaw*math.pi/180+math.pi/2)
@@ -78,9 +79,9 @@ def planning(sx, sy, syaw, max_acceleration, dt):
 
 
     print(path_yaw)
-    for i in range(0, 500):
-        rx.insert(0,rx[0]-dt*200*math.cos(path_yaw))
-        ry.insert(0,ry[0]-dt*200*math.sin(path_yaw))
+    for i in range(0, 550):
+        rx.insert(0,rx[0]-dt*100*math.cos(path_yaw))
+        ry.insert(0,ry[0]-dt*100*math.sin(path_yaw))
         path_yaw=math.atan((hy-ry[0])/(hx-rx[0]))
         print(rx[0]," : ",ry[0])
         #if (math.sqrt(rx[0]-hx)<(100*dt)):
